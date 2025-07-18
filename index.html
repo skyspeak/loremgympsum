@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge & Positivity Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-lightbulb"></i>
+                <h1>Knowledge & Positivity Generator</h1>
+            </div>
+            <p class="subtitle">Generate inspiring content with interesting facts, knowledge snippets, and uplifting news</p>
+        </header>
+
+        <main class="main-content">
+            <div class="controls">
+                <div class="control-group">
+                    <label for="content-type">Content Type:</label>
+                    <select id="content-type">
+                        <option value="mixed">Mixed (All Types)</option>
+                        <option value="facts">Interesting Facts</option>
+                        <option value="knowledge">Knowledge Snippets</option>
+                        <option value="positive">Positive News</option>
+                    </select>
+                </div>
+
+                <button id="generate-btn" class="generate-btn">
+                    <i class="fas fa-magic"></i>
+                    Generate Content
+                </button>
+            </div>
+
+            <div class="output-section">
+                <div class="output-header">
+                    <h2>Generated Content</h2>
+                    <button id="copy-btn" class="copy-btn" title="Copy to clipboard">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+                <div id="output" class="output">
+                    <div class="placeholder">
+                        <i class="fas fa-sparkles"></i>
+                        <p>Click "Generate Content" to create inspiring knowledge and positive news!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Inspired by DeLorean Ipsum • Made with ❤️ for knowledge and positivity</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

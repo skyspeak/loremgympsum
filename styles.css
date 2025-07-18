@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    background: #fafafa;
+    min-height: 100vh;
+    color: #1d1d1f;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #1d1d1f;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: #007aff;
+    opacity: 0.9;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #86868b;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+.main-content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.controls {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    height: fit-content;
+    border: 1px solid #e5e5e7;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.control-group {
+    margin-bottom: 0;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    color: #1d1d1f;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.control-group select {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    color: #1d1d1f;
+    font-family: inherit;
+}
+
+.control-group select:focus {
+    outline: none;
+    border-color: #007aff;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+.generate-btn {
+    width: 100%;
+    padding: 1.25rem 2rem;
+    background: #007aff;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-height: 60px;
+    font-family: inherit;
+}
+
+.generate-btn:hover {
+    background: #0056cc;
+    transform: translateY(-1px);
+}
+
+.generate-btn:active {
+    transform: translateY(0);
+    background: #004499;
+}
+
+.generate-btn i {
+    font-size: 1.2rem;
+}
+
+.output-section {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e5e5e7;
+}
+
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e5e7;
+}
+
+.output-header h2 {
+    color: #1d1d1f;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.copy-btn {
+    background: #f5f5f7;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #86868b;
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.copy-btn:hover {
+    background: #007aff;
+    color: white;
+    border-color: #007aff;
+}
+
+.output {
+    min-height: 200px;
+    line-height: 1.7;
+    color: #1d1d1f;
+}
+
+.placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    color: #86868b;
+    text-align: center;
+}
+
+.placeholder i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #007aff;
+    opacity: 0.6;
+}
+
+.placeholder p {
+    font-size: 1rem;
+    max-width: 300px;
+    color: #86868b;
+}
+
+.generated-content {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.generated-content p {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: #f5f5f7;
+    border-radius: 12px;
+    border-left: 3px solid #007aff;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.generated-content p:hover {
+    background: #f0f0f2;
+    transform: translateX(2px);
+}
+
+.footer {
+    text-align: center;
+    color: #86868b;
+    font-size: 0.875rem;
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .controls,
+    .output-section {
+        padding: 1.5rem;
+    }
+    
+    .logo {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .generate-btn {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        min-height: 56px;
+    }
+    
+    .generate-btn i {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .controls,
+    .output-section {
+        padding: 1.25rem;
+    }
+    
+    .generate-btn {
+        padding: 1rem;
+        font-size: 1rem;
+        min-height: 52px;
+    }
+    
+    .generate-btn i {
+        font-size: 1rem;
+    }
+}
+
+/* Loading animation */
+.loading {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success animation */
+.success {
+    animation: successPulse 0.4s ease-out;
+}
+
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+} 
