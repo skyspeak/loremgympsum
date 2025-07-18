@@ -42,7 +42,15 @@ const knowledgeSnippets = [
     "Your sense of smell is the only sense that connects directly to the brain's memory and emotion centers.",
     "The average person spends about 6 years of their life dreaming, though they only remember a small fraction of those dreams.",
     "Your brain can process information at speeds up to 268 miles per hour, making it faster than any computer.",
-    "The human body contains enough carbon to make 900 pencils, enough iron for a 3-inch nail, and enough fat for 7 bars of soap."
+    "The human body contains enough carbon to make 900 pencils, enough iron for a 3-inch nail, and enough fat for 7 bars of soap.",
+    "Your brain creates new neural pathways every time you learn something new, literally rewiring itself with each new experience.",
+    "The human body can survive for weeks without food, but only days without water, highlighting the critical importance of hydration.",
+    "Your brain uses more energy when you're thinking hard than when you're at rest, making mental work physically demanding.",
+    "The average person's attention span has decreased from 12 seconds to 8 seconds in the digital age, shorter than a goldfish's.",
+    "Your brain processes pain and pleasure in the same regions, which is why some people find spicy food enjoyable despite the burning sensation.",
+    "The human body has a built-in 'fight or flight' response that can be triggered by both real threats and perceived stress.",
+    "Your brain can recognize faces even when they're upside down, but struggles to identify emotions in inverted faces.",
+    "The human body produces enough heat in 30 minutes to boil a gallon of water, making us incredibly efficient heat generators."
 ];
 
 const positiveNews = [
